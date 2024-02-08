@@ -1,6 +1,5 @@
 package com.step_defs;
 
-import com.utilities.ConfigurationReader;
 import com.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;

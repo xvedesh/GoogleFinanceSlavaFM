@@ -9,7 +9,6 @@ import com.pages.GoogleFinance;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

@@ -2,9 +2,7 @@ package com.utilities;
 
 
 import org.apache.poi.ss.usermodel.*;
-
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -34,7 +32,7 @@ public class ExcelUtil {
 
         for (int i = 0; i < rowCount(); i++) {
             Row row = workSheet.getRow(i);
-            Map<String, String> rowMap = new HashMap<String, String>();
+            Map<String, String> rowMap = new HashMap<>();
             for (Cell cell : row) {
                 int columnIndex = cell.getColumnIndex();
                 rowMap.put(columns.get(columnIndex), cell.toString());

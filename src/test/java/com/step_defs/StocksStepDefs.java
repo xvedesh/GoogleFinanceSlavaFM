@@ -1,6 +1,5 @@
 package com.step_defs;
 
-import com.mapping.StocksMapping;
 import com.utilities.BrowserUtils;
 import com.utilities.Driver;
 import com.utilities.PageUtils;
@@ -8,9 +7,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
-import java.util.List;
-import java.util.Map;
 
 public class StocksStepDefs {
 
