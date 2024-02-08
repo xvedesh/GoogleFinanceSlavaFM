@@ -20,7 +20,6 @@ public class BrowserUtils {
     static {
         searchEngineEnv.put("Google Search", "env1");
         searchEngineEnv.put("Bing Search", "env2");
-        searchEngineEnv.put("Yahoo Search", "env3");
     }
 
     public static void getSearchEngine(String searchEngine) {
