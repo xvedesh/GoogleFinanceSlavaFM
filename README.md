@@ -1,4 +1,4 @@
-# POM Java Selenium Test Framework
+# Scalable Page Object Model (POM) UI testing framework
 
 This project is a scalable Page Object Model (POM) UI testing framework 
 with parallel execution capabilities. 
