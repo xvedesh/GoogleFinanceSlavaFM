@@ -35,23 +35,20 @@ public class Driver {
             }
             System.out.println("Browser: " + browser);
             switch (browser) {
-
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
+                    WebDriverManager.chromedriver().clearDriverCache().setup();
                     driverPool.set(new ChromeDriver());
-
                     break;
                 case "chrome-headless":
-                    WebDriverManager.chromedriver().setup();
+                    WebDriverManager.chromedriver().clearDriverCache().setup();
                     driverPool.set(new ChromeDriver(new ChromeOptions().setHeadless(true)));
-
                     break;
                 case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
+                    WebDriverManager.firefoxdriver().clearDriverCache().setup();
                     driverPool.set((new FirefoxDriver()));
                     break;
                 case "firefox-headless":
-                    WebDriverManager.firefoxdriver().setup();
+                    WebDriverManager.firefoxdriver().clearDriverCache().setup();
                     driverPool.set(new FirefoxDriver(new FirefoxOptions().setHeadless(true)));
                     break;
             }
