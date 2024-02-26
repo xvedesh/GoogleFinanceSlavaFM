@@ -22,6 +22,13 @@ public class ConfigurationReader {
         }
     }
 
+    /**
+     * Retrieves the value of the specified property from the loaded properties.
+     * This method is used to access configuration values stored in a properties file.
+     *
+     * @param keyName The name of the property whose value is to be retrieved.
+     * @return The value of the specified property or null if the property is not found.
+     */
     public static String getProperty(String keyName) {
         return properties.getProperty(keyName);
     }

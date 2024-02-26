@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+/**
+ * Utility class for reading Excel files. It simplifies reading data from Excel sheets into Java structures.
+ */
 public class ExcelUtil {
 
     private Sheet workSheet;
     private Workbook workBook;
     private String path;
 
+    /**
+     * Initializes an ExcelUtil instance which loads the workbook and worksheet from the given path and sheet name.
+     *
+     * @param path The file path of the Excel workbook.
+     * @param sheetName The name of the sheet within the workbook to be used.
+     */
     public ExcelUtil(String path, String sheetName) {
         this.path = path;
         try {
@@ -26,6 +34,12 @@ public class ExcelUtil {
         }
     }
 
+    /**
+     * Retrieves all data from the worksheet as a list of maps.
+     * Each map represents a row where the key is the column name and the value is the cell content.
+     *
+     * @return List of maps, each representing a row with column names as keys and cell contents as values.
+     */
     public List<Map<String, String>> getDataList() {
         List<String> columns = getColumnsNames();
         List<Map<String, String>> data = new ArrayList<>();
@@ -42,6 +56,11 @@ public class ExcelUtil {
         return data;
     }
 
+    /**
+     * Retrieves the column names from the first row of the worksheet.
+     *
+     * @return A list of strings representing the column names.
+     */
     public List<String> getColumnsNames() {
         List<String> columns = new ArrayList<>();
 

@@ -17,6 +17,17 @@ public class Driver {
 
     private static final InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
+    /**
+     * Retrieves the WebDriver from the pool, initializing it if necessary based on the system or configuration property.
+     * This method supports multiple browsers including Chrome, Firefox, and their headless modes. If no browser is specified
+     * via system properties, it defaults to the browser specified in the 'configuration.properties' file.
+     * The method ensures that only one instance of WebDriver is created per thread to avoid unwanted interactions between tests.
+     *
+     * Upon initialization, the browser window is maximized. For headless modes, the browser does not display a UI,
+     * allowing tests to run in a headless environment like CI/CD pipelines.
+     *
+     * @return The WebDriver instance for the current thread.
+     */
     public static WebDriver getDriver() {
         if (driverPool.get() == null) {
             if (System.getProperty("BROWSER") == null) {
@@ -49,6 +60,13 @@ public class Driver {
         return driverPool.get();
     }
 
+    /**
+     * Closes the current WebDriver instance and removes it from the driver pool.
+     * This method ensures that the browser is properly shut down and the associated
+     * WebDriver instance is cleaned up after tests are completed, preventing resource leaks.
+     * It checks if there is an existing WebDriver instance in the current thread before attempting to quit and remove it,
+     * ensuring safe and effective teardown of the test environment.
+     */
     public static void closeDriver(){
         if(driverPool.get()!=null) {
             driverPool.get().quit();
