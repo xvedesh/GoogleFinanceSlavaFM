@@ -3,8 +3,8 @@ package com.utilities;
 import com.Interfaces.GFPage;
 import com.Interfaces.SearchPage;
 import com.mapping.StocksMapping;
-import com.pages.Bing;
-import com.pages.Google;
+import com.pages.Brave;
+import com.pages.DuckDuckGo;
 import com.pages.GoogleFinance;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
@@ -26,9 +26,9 @@ public class PageUtils {
     public static SearchPage getCurrentPage() {
         switch (System.getProperty("currEnv")) {
             case "env1":
-                return new Google();
+                return new DuckDuckGo();
             case "env2":
-                return new Bing();
+                return new Brave();
             default:
                 throw new IllegalStateException("Environment not recognized");
         }

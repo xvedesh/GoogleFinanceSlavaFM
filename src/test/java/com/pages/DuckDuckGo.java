@@ -8,25 +8,24 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class Bing implements SearchPage {
+public class DuckDuckGo implements SearchPage {
 
-    public Bing() {
+    public DuckDuckGo() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(name = "q")
-    public WebElement bngSearchField;
+    public WebElement gglSearchField;
 
-    @FindBy(xpath = "//h2/a[contains(@h, 'ID=SERP,5')]")
-    public List<WebElement> bngSearchResults;
+    @FindBy(xpath = "//span[contains(@class,'EKtkFWMYpwzMKOYr0GYm') and contains(@class,'LQVY1Jpkk8nyJ6HBWKAk')]")
+    public List<WebElement> gglSearchResults;
 
     @Override
     public WebElement getSearchField() {
-        return bngSearchField;
+        return gglSearchField;
     }
     @Override
     public List<WebElement> getSearchResults() {
-        return bngSearchResults;
+        return gglSearchResults;
     }
-
 }

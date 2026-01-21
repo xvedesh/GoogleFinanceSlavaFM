@@ -8,24 +8,25 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class Google implements SearchPage {
+public class Brave implements SearchPage {
 
-    public Google() {
+    public Brave() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(name = "q")
-    public WebElement gglSearchField;
+    public WebElement brvSearchField;
 
-    @FindBy(xpath = "//h3[@class=\"LC20lb MBeuO DKV0Md\"]")
-    public List<WebElement> gglSearchResults;
+    @FindBy(xpath = "//div[contains(@class,'search-snippet-title')]")
+    public List<WebElement> brvSearchResults;
 
     @Override
     public WebElement getSearchField() {
-        return gglSearchField;
+        return brvSearchField;
     }
     @Override
     public List<WebElement> getSearchResults() {
-        return gglSearchResults;
+        return brvSearchResults;
     }
+
 }
