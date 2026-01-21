@@ -14,8 +14,8 @@ public class BrowserUtils {
     // This static block puts search engine parameters taken from Scenario Outline Examples as keys
     // and property parameters as values.
     static {
-        searchEngineEnv.put("Google Search", "env1");
-        searchEngineEnv.put("Bing Search", "env2");
+        searchEngineEnv.put("DuckDuckGo", "env1");
+        searchEngineEnv.put("Brave", "env2");
     }
 
     /**

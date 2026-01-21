@@ -10,6 +10,6 @@ Feature: Viewing stocks on Google Finance
     Then the user can identify which stocks from presented have positive dynamic
 
     Examples:
-      | Search Engine | Search Result                                              |
-      | Google Search | Google Finance - Stock Market Prices, Real-time Quotes ... |
-      | Bing Search   | Google Finance - Stock Market Prices, Real-time Quotes     |
+      | Search Engine | Search Result                                                          |
+      | DuckDuckGo    | google finance                                                         |
+      | Brave         | Google Finance - Stock Market Prices, Real-time Quotes & Business News |
